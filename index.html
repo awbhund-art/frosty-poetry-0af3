@@ -20,7 +20,6 @@ export async function onRequest(context) {
   // 3. Agar mobile device HAI, toh redirect mat karein, agla page (index.html) load hone dein
   if (isMobileDevice) {
     return context.next();
-  }
 
   // 4. Sirf Desktop users (jo mobile nahi hain) unko redirect karein
   return Response.redirect("https://google.com", 302);
